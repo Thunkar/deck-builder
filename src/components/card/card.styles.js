@@ -17,7 +17,7 @@ export const CardContainer = styled(Boxed)`
     position: relative; 
     flex-direction: column;
     border-radius: 0px;
-    width: 350px;
+    width: 330px;
     height: 465px;
     background-image: ${props => `url(/assets/${props.borderImage})` || `url(/assets/${props.bgImage})`  || null};
     background-color: ${props => (props.bgColor && !props.bgImage) ? props.bgColor : "white"};
