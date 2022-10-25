@@ -1,6 +1,8 @@
 {
     "common": {
-        "borderImage": "space_bg.jpg"
+        "borderImage": "space_bg.jpg",
+        "bgColor": "#ffffff",
+        "background": "repeating-linear-gradient( 45deg,#90a2af,#c1c1c1 -2.5px,#ffffff 19.5px,#b3b3b3 24.5px )"
     },
     "cards": [
         {
@@ -33,7 +35,7 @@
         },
         {
             "title": "Reactor (Size II)",
-            "image": "reactor_1.png",
+            "image": "reactor_2.png",
             "sections": [
                 {
                     "costs": [
@@ -61,7 +63,7 @@
         },
         {
             "title": "Thrusters (Size I)",
-            "image": "reactor_1.png",
+            "image": "thrusters.png",
             "sections": [
                 {
                     "costs": [
@@ -90,6 +92,9 @@
                     "effects": {
                         "or": [{"name": "turn", "value": 2}, {"name": "accelerate", "value": 2}]
                     }
+                },
+                {
+                    "text": "Burn, baby, burn"
                 }
             ],
             "footer": {
@@ -98,7 +103,7 @@
         },
         {
             "title": "Railgun",
-            "image": "reactor_1.png",
+            "image": "railgun.png",
             "sections": [
                 {
                     "costs": [
@@ -109,6 +114,10 @@
                         {
                             "type": "dice",
                             "value": 6
+                        },
+                        {
+                            "type": "angle",
+                            "value": 1
                         }
                     ],
                     "text": "Boom, headshot",
@@ -122,6 +131,38 @@
             ],
             "footer": {
                 "repair": 5
+            }
+        },
+        {
+            "title": "Missiles",
+            "image": "missiles.png",
+            "sections": [
+                {
+                    "costs": [
+                        {
+                            "type": "energy",
+                            "value": 3
+                        },
+                        {
+                            "type": "dice",
+                            "value": 3
+                        },
+                        {
+                            "type": "angle",
+                            "value": 4
+                        }
+                    ],
+                    "text": "Barrage",
+                    "effects": {
+                        "or": [{"name": "damage", "value": 3}]
+                    }
+                },
+                {
+                    "text": "Those are not birds"
+                }
+            ],
+            "footer": {
+                "repair": 3
             }
         }
     ]

@@ -18,9 +18,10 @@ export const CardContainer = styled(Boxed)`
     flex-direction: column;
     border-radius: 0px;
     width: 350px;
-    height: 450px;
-    background-image: ${props => `url(/assets/${props.borderImage})` || `url(Yassets/${props.bgImage})`  || null};
+    height: 465px;
+    background-image: ${props => `url(/assets/${props.borderImage})` || `url(/assets/${props.bgImage})`  || null};
     background-color: ${props => (props.bgColor && !props.bgImage) ? props.bgColor : "white"};
+    background: ${props => (props.background && !props.bgImage && !props.borderImage) ? props.background : null};
     margin: 15px;
 `
 
@@ -29,6 +30,7 @@ export const CardContainerBg = styled(Boxed)`
     margin: 10px;
     border-radius: 15px;
     background-color: ${props => (props.bgColor && !props.bgImage) ? props.bgColor : "white"};
+    background: ${props => (props.background && !props.bgImage) ? props.background : null};
 `
 
 export const TitleContainer = styled(Boxed)`
@@ -50,7 +52,7 @@ export const ImageContainer = styled(Boxed)`
     background-size: cover;
     background-position: center;
     height: 250px;
-    border-radius: 0px 0px 15px 15px;
+    border-radius: 15px;
     margin: 5px 5px 0px 5px;
 `
 
@@ -81,16 +83,16 @@ export const TextContainer = styled.div`
 `
 
 export const Icon = styled.img`
-    height: 18px;
-    width: 16px;
+    height: 20px;
+    width: 20px;
     margin: 0px 6px;
     }
 `
 
 export const Footer = styled(SectionContainer)`
     position: absolute;
-    bottom: 10px;
-    right: 10px;
+    bottom: 15px;
+    right: 15px;
     width: 12%;
     margin: 0px;
     align-self: flex-end;
