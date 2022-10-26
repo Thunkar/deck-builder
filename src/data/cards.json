@@ -28,12 +28,6 @@
                     "text": "Maximum flow"
                 },
                 {
-                    "text": "Maneuvering thrusters",
-                    "effects": {
-                        "or": [{"name": "turn", "value": 2}]   
-                    }
-                },
-                {
                     "text": "The smallest reactor on a FTL ship"
                 }
             ],
@@ -60,12 +54,6 @@
                         }
                     ],
                     "text": "Maximum flow"
-                },
-                {
-                    "text": "Maneuvering thrusters",
-                    "effects": {
-                        "or": [{"name": "turn", "value": 1}]   
-                    }
                 },
                 {
                     "text": "Great for toasting marshmallows"
@@ -130,6 +118,10 @@
                         {
                             "type": "angle",
                             "value": "D"
+                        },
+                        {
+                            "type": "range",
+                            "value": 4
                         }
                     ],
                     "text": "Boom, headshot",
@@ -162,6 +154,10 @@
                         {
                             "type": "angle",
                             "value": 3
+                        },
+                        {
+                            "type": "range",
+                            "value": 2
                         }
                     ],
                     "text": "Barrage",
@@ -194,6 +190,10 @@
                         {
                             "type": "angle",
                             "value": 1
+                        },
+                        {
+                            "type": "range",
+                            "value": 3
                         }
                     ],
                     "text": "Light show",
@@ -226,6 +226,10 @@
                         {
                             "type": "angle",
                             "value": 1
+                        },
+                        {
+                            "type": "range",
+                            "value": 2
                         }
                     ],
                     "text": "Salvo",
@@ -268,21 +272,18 @@
                             "value": 4
                         },
                         {
-                            "type": "angle",
-                            "value": 3
-                        },
-                        {
                             "type": "heat",
                             "value": 2
+                        },
+                        {
+                            "type": "angle",
+                            "value": 3
                         }
                     ],
                     "text": "Overdrive",
                     "effects": {
                         "or": [{"name": "evasion", "value": "+4"}]
                     }
-                },
-                {
-                    "text": "I call it my comfort zone"
                 }
             ],
             "footer": {

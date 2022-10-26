@@ -3,12 +3,14 @@ import * as SC from './card.styles.js';
 function Section({text, costs, effects}) {
     return (
         <SC.SectionContainer>
-            {costs?.map((cost, index) => (
-            <SC.CostEffectContainer key={index}>
-                <p>{cost?.value}</p>
-                <SC.Icon src={`/assets/${cost.type}.png`}></SC.Icon>
-            </SC.CostEffectContainer> 
-            ))}
+            <SC.CostContainer>
+                {costs?.map((cost, index) => (
+                <SC.CostEffectContainer key={index}>
+                    <p>{cost?.value}</p>
+                    <SC.Icon src={`/assets/${cost.type}.png`}></SC.Icon>
+                </SC.CostEffectContainer> 
+                ))}
+            </SC.CostContainer>
             <SC.TextContainer>
                 <p>{text}</p>
             </SC.TextContainer>

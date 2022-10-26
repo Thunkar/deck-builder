@@ -18,7 +18,7 @@ export const CardContainer = styled(Boxed)`
     flex-direction: column;
     border-radius: 0px;
     width: 330px;
-    height: 465px;
+    height: 470px;
     background-image: ${props => `url(/assets/${props.borderImage})` || `url(/assets/${props.bgImage})`  || null};
     background-color: ${props => (props.bgColor && !props.bgImage) ? props.bgColor : "white"};
     background: ${props => (props.background && !props.bgImage && !props.borderImage) ? props.background : null};
@@ -71,7 +71,14 @@ export const CostEffectContainer = styled.div`
     font-weight: bold;
     font-size: 16px;
     align-items: center;
-    line-height: 16px;
+    line-height: 23px;
+`
+
+export const CostContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100px;
 `
 
 export const TextContainer = styled.div`
