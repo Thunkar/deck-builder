@@ -22,7 +22,7 @@ export const CardContainer = styled(Boxed)`
     background-image: ${props => `url(/assets/${props.borderImage})` || `url(/assets/${props.bgImage})`  || null};
     background-color: ${props => (props.bgColor && !props.bgImage) ? props.bgColor : "white"};
     background: ${props => (props.background && !props.bgImage && !props.borderImage) ? props.background : null};
-    margin: .1%;
+    margin: .05em;
 `
 
 export const CardContainerBg = styled(Boxed)`
