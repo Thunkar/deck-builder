@@ -13,7 +13,7 @@ function App() {
   });
 
   const breakAfterRows = 2;
-  const columnSize = 4;
+  const columnSize = 5;
 
   return (
  <SC.NonPrintableWrapper>

@@ -17,8 +17,8 @@ export const CardContainer = styled(Boxed)`
     position: relative; 
     flex-direction: column;
     border-radius: 0;
-    height: 95mm;
-    width: 65mm;
+    height: 87mm;
+    width: 56mm;
     background-image: ${props => `url(/assets/${props.borderImage})` || `url(/assets/${props.bgImage})`  || null};
     background-color: ${props => (props.bgColor && !props.bgImage) ? props.bgColor : "white"};
     background: ${props => (props.background && !props.bgImage && !props.borderImage) ? props.background : null};
@@ -36,7 +36,7 @@ export const CardContainerBg = styled(Boxed)`
 export const TitleContainer = styled(Boxed)`
     color: ${props => props.titleColor || null};
     background-color: ${colors.primary};
-    font-size: 1em;
+    font-size: .8em;
     padding: 2% 5%;
     font-weight: bold;
     border-radius: 5mm;
@@ -70,7 +70,7 @@ export const IconsContainer = styled.div`
     display: flex;
     flex-direction: row;
     font-weight: bold;
-    font-size: .8em;
+    font-size: .75em;
     align-items: center;
     line-height: 1.5em;
 `
@@ -79,7 +79,7 @@ export const CostContainer = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 30%;
+    width: 32%;
 `
 
 export const EffectsContainer = styled(CostContainer)`
@@ -92,22 +92,22 @@ export const TextContainer = styled.div`
     align-items: center;
     font-style: italic;
     flex-grow: 1;
-    font-size: .8em;
+    font-size: .65em;
 `
 
 export const Icon = styled.img`
-    height: 1.2em;
-    width: 1.2em;
+    height: 1.1em;
+    width: 1.1em;
     margin: 0 .2em;
 `
 
 export const Footer = styled(SectionContainer)`
     position: absolute;
     filter: unset;
-    bottom: 2.5%;
-    right: 4.5%;
+    bottom: 2.2%;
+    right: 3.8%;
     width: 8%;
     margin: 0;
     align-self: flex-end;
-    font-size: .7em;
+    font-size: .6em;
 `

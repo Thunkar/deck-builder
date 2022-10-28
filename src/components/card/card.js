@@ -8,6 +8,7 @@ function Section({text, costs, effects}) {
                     <SC.IconsContainer key={index}>
                         <p>{cost?.value}</p>
                         <SC.Icon src={`/assets/${cost.type}.png`}></SC.Icon>
+                        { cost?.blocks && <p>/&nbsp;{cost.blocks}B</p>}
                     </SC.IconsContainer> 
                     ))}
                 </SC.CostContainer>
