@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const NonPrintableWrapper = styled.div`
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+`
+
 export const CardRow = styled.div`
     display: flex;
     flex-direction: row;
@@ -7,6 +14,7 @@ export const CardRow = styled.div`
 
 export const Container = styled.div`
     display: block;
+    margin: auto;
 
     & ${CardRow}:nth-child(${props => props.breakAfterRows}) {
         page-break-after: always;

@@ -16,7 +16,7 @@ function App() {
   const columnSize = 4;
 
   return (
-    <>
+ <SC.NonPrintableWrapper>
       <SC.Container breakAfterRows={breakAfterRows} ref={componentRef}>
         {
           chunk(cardData?.cards, columnSize).map((cardChunk, rowIndex) => 
@@ -28,7 +28,7 @@ function App() {
         }
       </SC.Container>
       <SC.PrintButton onClick={handlePrint}>Print this out!</SC.PrintButton>
-    </>
+    </SC.NonPrintableWrapper>
   );
 }
 
