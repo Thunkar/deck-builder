@@ -3,28 +3,40 @@ import * as SC from './card.styles.js';
 function Section({text, costs, effects}) {
     return (
         <SC.SectionContainer>
-            <SC.CostContainer>
-                {costs?.map((cost, index) => (
-                <SC.CostEffectContainer key={index}>
-                    <p>{cost?.value}</p>
-                    <SC.Icon src={`/assets/${cost.type}.png`}></SC.Icon>
-                </SC.CostEffectContainer> 
-                ))}
-            </SC.CostContainer>
+            { costs && <SC.CostContainer>
+                    {costs?.map((cost, index) => (
+                    <SC.IconsContainer key={index}>
+                        <p>{cost?.value}</p>
+                        <SC.Icon src={`/assets/${cost.type}.png`}></SC.Icon>
+                    </SC.IconsContainer> 
+                    ))}
+                </SC.CostContainer>
+            }
             <SC.TextContainer>
                 <p>{text}</p>
             </SC.TextContainer>
-            <SC.CostEffectContainer>
+            {effects && <SC.EffectsContainer>
+            
                 {
                     effects?.or && effects.or.map((effect, index) => (
-                    <>
+                    <SC.IconsContainer>
                         <p>{effect.value}</p>
                         <SC.Icon src={`/assets/${effect.name}.png`}></SC.Icon>
-                        {index !== (effects.or.length - 1) && <p>&nbsp;|&nbsp;</p>}
-                    </>
+                        {index !== (effects.or.length - 1) && <p>|&nbsp;</p>}
+                    </SC.IconsContainer>
                     ))
                 }
-            </SC.CostEffectContainer>
+                {
+                    effects?.and && effects.and.map((effect, index) => (
+                        <SC.IconsContainer>
+                            <p>{effect.value}</p>
+                            <SC.Icon src={`/assets/${effect.name}.png`}></SC.Icon>
+                            {index !== (effects.and.length - 1) && <p>&&nbsp;</p>}
+                        </SC.IconsContainer>
+                        ))
+                }
+                </SC.EffectsContainer>
+            }
         </SC.SectionContainer>
     )
 }

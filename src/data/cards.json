@@ -63,7 +63,7 @@
         },
         {
             "title": "Thrusters (Size I)",
-            "image": "thrusters.png",
+            "image": "thrusters_1.png",
             "sections": [
                 {
                     "costs": [
@@ -90,7 +90,7 @@
                     ],
                     "text": "Afterburners",
                     "effects": {
-                        "or": [{"name": "turn", "value": 2}, {"name": "accelerate", "value": 2}]
+                        "and": [{"name": "turn", "value": 2}, {"name": "accelerate", "value": 2}]
                     }
                 },
                 {
@@ -121,12 +121,12 @@
                         },
                         {
                             "type": "range",
-                            "value": 4
+                            "value": 6
                         }
                     ],
                     "text": "Boom, headshot",
                     "effects": {
-                        "or": [{"name": "damage", "value": 10}]
+                        "or": [{"name": "damage", "value": "10"}]
                     }
                 },
                 {
@@ -139,7 +139,7 @@
         },
         {
             "title": "Missile rack",
-            "image": "missiles.png",
+            "image": "missile_rack.png",
             "sections": [
                 {
                     "costs": [
@@ -149,7 +149,7 @@
                         },
                         {
                             "type": "dice",
-                            "value": 3
+                            "value": 4
                         },
                         {
                             "type": "angle",
@@ -162,7 +162,7 @@
                     ],
                     "text": "Barrage",
                     "effects": {
-                        "or": [{"name": "damage", "value": 3}]
+                        "or": [{"name": "damage", "value": "3 x 2"}]
                     }
                 },
                 {
@@ -175,7 +175,7 @@
         },
         {
             "title": "Laser turret",
-            "image": "lasers.png",
+            "image": "laser_turret.png",
             "sections": [
                 {
                     "costs": [
@@ -193,7 +193,7 @@
                         },
                         {
                             "type": "range",
-                            "value": 3
+                            "value": 4
                         }
                     ],
                     "text": "Light show",
@@ -211,7 +211,7 @@
         },
         {
             "title": "Ballistic rack",
-            "image": "ballistic-1.png",
+            "image": "ballistic_rack.png",
             "sections": [
                 {
                     "costs": [
@@ -234,7 +234,7 @@
                     ],
                     "text": "Salvo",
                     "effects": {
-                        "or": [{"name": "damage", "value": 3}]
+                        "or": [{"name": "damage", "value": "3 x 1"}]
                     }
                 },
                 {
@@ -247,7 +247,7 @@
         },
         {
             "title": "Deflectors",
-            "image": "deflectors-1.png",
+            "image": "deflectors_1.png",
             "sections": [
                 {
                     "costs": [
@@ -284,6 +284,79 @@
                     "effects": {
                         "or": [{"name": "evasion", "value": "+4"}]
                     }
+                }
+            ],
+            "footer": {
+                "repair": 3
+            }
+        },
+        {
+            "title": "Sensor array",
+            "image": "sensors_1.png",
+            "sections": [
+                {
+                    "costs": [
+                        {
+                            "type": "energy",
+                            "value": 2
+                        },
+                        {
+                            "type": "angle",
+                            "value": 3
+                        }
+                    ],
+                    "text": "Ping",
+                    "effects": {
+                        "or": [{"name": "detection", "value": "+1"}]
+                    }
+                },
+                {
+                    "costs": [
+                        {
+                            "type": "energy",
+                            "value": 3
+                        },
+                        {
+                            "type": "heat",
+                            "value": 1
+                        },
+                        {
+                            "type": "angle",
+                            "value": 3
+                        }
+                    ],
+                    "text": "Overload",
+                    "effects": {
+                        "or": [{"name": "detection", "value": "+2"}]
+                    }
+                }
+            ],
+            "footer": {
+                "repair": 3
+            }
+        },
+        {
+            "title": "Jump drive",
+            "image": "jump_drive.png",
+            "sections": [
+                {
+                    "costs": [
+                        {
+                            "type": "energy",
+                            "value": 6
+                        },
+                        {
+                            "type": "heat",
+                            "value": 2
+                        }
+                    ],
+                    "text": "Jump",
+                    "effects": {
+                        "or": [{"name": "jump", "value": "6"}]
+                    }
+                },
+                {
+                    "text": "Punch it!"
                 }
             ],
             "footer": {
