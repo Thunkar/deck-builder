@@ -16,10 +16,9 @@ function Section({text, costs, effects}) {
                 <p>{text}</p>
             </SC.TextContainer>
             {effects && <SC.EffectsContainer>
-            
                 {
                     effects?.or && effects.or.map((effect, index) => (
-                    <SC.IconsContainer>
+                    <SC.IconsContainer key={index}>
                         <p>{effect.value}</p>
                         <SC.Icon src={`/assets/${effect.name}.png`}></SC.Icon>
                         {index !== (effects.or.length - 1) && <p>|&nbsp;</p>}
@@ -28,7 +27,7 @@ function Section({text, costs, effects}) {
                 }
                 {
                     effects?.and && effects.and.map((effect, index) => (
-                        <SC.IconsContainer>
+                        <SC.IconsContainer key={index}>
                             <p>{effect.value}</p>
                             <SC.Icon src={`/assets/${effect.name}.png`}></SC.Icon>
                             {index !== (effects.and.length - 1) && <p>&&nbsp;</p>}

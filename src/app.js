@@ -20,7 +20,7 @@ function App() {
       <SC.Container breakAfterRows={breakAfterRows} ref={componentRef}>
         {
           chunk(cardData?.cards, columnSize).map((cardChunk, rowIndex) => 
-             (<SC.CardRow>
+             (<SC.CardRow key={rowIndex}>
               {
                 cardChunk.map((card, index) => (<Card key={rowIndex + index} {...{...cardData.common, ...card}}/>))
               }

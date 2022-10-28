@@ -18,7 +18,7 @@ export const CardContainer = styled(Boxed)`
     flex-direction: column;
     border-radius: 0;
     height: 95mm;
-    width: 70mm;
+    width: 65mm;
     background-image: ${props => `url(/assets/${props.borderImage})` || `url(/assets/${props.bgImage})`  || null};
     background-color: ${props => (props.bgColor && !props.bgImage) ? props.bgColor : "white"};
     background: ${props => (props.background && !props.bgImage && !props.borderImage) ? props.background : null};
@@ -51,7 +51,7 @@ export const ImageContainer = styled(Boxed)`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 45%;
+    height: 50%;
     border-radius: 5mm;
     margin: 2% 1.5% 0 1.5%;
 

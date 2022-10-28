@@ -62,7 +62,7 @@
             "footer": {}
         },
         {
-            "title": "Thrusters (Size I)",
+            "title": "Sublight thrusters (Size I)",
             "image": "thrusters_1.png",
             "sections": [
                 {
@@ -90,11 +90,99 @@
                     ],
                     "text": "Afterburners",
                     "effects": {
-                        "and": [{"name": "turn", "value": 2}, {"name": "accelerate", "value": 2}]
+                        "and": [{"name": "accelerate", "value": 2}]
                     }
                 },
                 {
                     "text": "Burn, baby, burn"
+                }
+            ],
+            "footer": {
+                "repair": 2
+            }
+        },
+        {
+            "title": "Sublight thrusters (Size I)",
+            "image": "thrusters_1.png",
+            "sections": [
+                {
+                    "costs": [
+                        {
+                            "type": "energy",
+                            "value": 2
+                        }
+                    ],
+                    "text": "Standard burn",
+                    "effects": {
+                        "or": [{"name": "turn", "value": 1}, {"name": "accelerate", "value": 1}]
+                    }
+                },
+                {
+                    "costs": [
+                        {
+                            "type": "energy",
+                            "value": 2
+                        },
+                        {
+                            "type": "heat",
+                            "value": 2
+                        }
+                    ],
+                    "text": "Afterburners",
+                    "effects": {
+                        "and": [{"name": "accelerate", "value": 2}]
+                    }
+                },
+                {
+                    "text": "Burn, baby, burn"
+                }
+            ],
+            "footer": {
+                "repair": 2
+            }
+        },
+        {
+            "title": "Maneuvering thrusters",
+            "image": "maneuvering_thrusters.png",
+            "sections": [
+                {
+                    "costs": [
+                        {
+                            "type": "energy",
+                            "value": 1
+                        }
+                    ],
+                    "text": "Standard burn",
+                    "effects": {
+                        "or": [{"name": "turn", "value": 2}]
+                    }
+                },
+                {
+                    "text": "The 'point' in 'point and shoot'"
+                }
+            ],
+            "footer": {
+                "repair": 2
+            }
+        },
+        {
+            "title": "Maneuvering thrusters",
+            "image": "maneuvering_thrusters.png",
+            "sections": [
+                {
+                    "costs": [
+                        {
+                            "type": "energy",
+                            "value": 1
+                        }
+                    ],
+                    "text": "Standard burn",
+                    "effects": {
+                        "or": [{"name": "turn", "value": 2}]
+                    }
+                },
+                {
+                    "text": "The 'point' in 'point and shoot'"
                 }
             ],
             "footer": {
@@ -135,6 +223,42 @@
             ],
             "footer": {
                 "repair": 5
+            }
+        },
+        {
+            "title": "Missile rack",
+            "image": "missile_rack.png",
+            "sections": [
+                {
+                    "costs": [
+                        {
+                            "type": "energy",
+                            "value": 3
+                        },
+                        {
+                            "type": "dice",
+                            "value": 4
+                        },
+                        {
+                            "type": "angle",
+                            "value": 3
+                        },
+                        {
+                            "type": "range",
+                            "value": 2
+                        }
+                    ],
+                    "text": "Barrage",
+                    "effects": {
+                        "or": [{"name": "damage", "value": "3 x 2"}]
+                    }
+                },
+                {
+                    "text": "Those are not birds"
+                }
+            ],
+            "footer": {
+                "repair": 3
             }
         },
         {
@@ -238,11 +362,109 @@
                     }
                 },
                 {
-                    "text": "In this ship we do it Texas style"
+                    "costs": [
+                        {
+                            "type": "energy",
+                            "value": 2
+                        },
+                        {
+                            "type": "angle",
+                            "value": 3
+                        }
+                    ],
+                    "text": "PDC",
+                    "effects": {
+                        "or": [{"name": "evasion", "value": "+1"}]
+                    }
                 }
             ],
             "footer": {
                 "repair": 3
+            }
+        },
+        {
+            "title": "Ballistic rack",
+            "image": "ballistic_rack.png",
+            "sections": [
+                {
+                    "costs": [
+                        {
+                            "type": "energy",
+                            "value": 2
+                        },
+                        {
+                            "type": "dice",
+                            "value": 3
+                        },
+                        {
+                            "type": "angle",
+                            "value": 1
+                        },
+                        {
+                            "type": "range",
+                            "value": 2
+                        }
+                    ],
+                    "text": "Salvo",
+                    "effects": {
+                        "or": [{"name": "damage", "value": "3 x 1"}]
+                    }
+                },
+                {
+                    "costs": [
+                        {
+                            "type": "energy",
+                            "value": 2
+                        },
+                        {
+                            "type": "angle",
+                            "value": 3
+                        }
+                    ],
+                    "text": "PDC",
+                    "effects": {
+                        "or": [{"name": "evasion", "value": "+1"}]
+                    }
+                }
+            ],
+            "footer": {
+                "repair": 3
+            }
+        },
+        {
+            "title": "Plasma cannons",
+            "image": "plasma_cannons.png",
+            "sections": [
+                {
+                    "costs": [
+                        {
+                            "type": "energy",
+                            "value": 5
+                        },
+                        {
+                            "type": "dice",
+                            "value": 3
+                        },
+                        {
+                            "type": "angle",
+                            "value": 3
+                        },
+                        {
+                            "type": "range",
+                            "value": 2
+                        }
+                    ],
+                    "text": "Fire and flames",
+                    "effects": {
+                        "or": [{"name": "damage", "value": "3 x 3"}]
+                    }
+                },
+                {
+                    "text": "Like cotton candy, but deadly"
+                }
+            ],
+            "footer": {
+                "repair": 4
             }
         },
         {
