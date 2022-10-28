@@ -475,6 +475,22 @@
                     "costs": [
                         {
                             "type": "energy",
+                            "value": 2
+                        },
+                        {
+                            "type": "angle",
+                            "value": 1
+                        }
+                    ],
+                    "text": "Narrow field",
+                    "effects": {
+                        "or": [{"name": "evasion", "value": "+2"}]
+                    }
+                },
+                {
+                    "costs": [
+                        {
+                            "type": "energy",
                             "value": 4
                         },
                         {
@@ -482,7 +498,7 @@
                             "value": 3
                         }
                     ],
-                    "text": "Constant field",
+                    "text": "Wide field",
                     "effects": {
                         "or": [{"name": "evasion", "value": "+2"}]
                     }

@@ -28,7 +28,7 @@ export const CardContainer = styled(Boxed)`
 export const CardContainerBg = styled(Boxed)`
     flex-grow: 1;
     margin: 2.5%;
-    border-radius: 5mm;
+    border-radius: 4mm;
     background-color: ${props => (props.bgColor && !props.bgImage) ? props.bgColor : "white"};
     background: ${props => (props.background && !props.bgImage) ? props.background : null};
 `
@@ -41,7 +41,7 @@ export const TitleContainer = styled(Boxed)`
     font-weight: bold;
     border-radius: 5mm;
     filter: drop-shadow(1mm .5mm 1mm black);
-    margin: 2% 1.5% 0 1.5%;
+    margin: 1% 1.5% 0 1.5%;
 `
 
 export const ImageContainer = styled(Boxed)`
@@ -54,7 +54,6 @@ export const ImageContainer = styled(Boxed)`
     height: 50%;
     border-radius: 5mm;
     margin: 2% 1.5% 0 1.5%;
-
     filter: drop-shadow(1mm .5mm 1mm black);
 `
 
@@ -104,9 +103,11 @@ export const Icon = styled.img`
 
 export const Footer = styled(SectionContainer)`
     position: absolute;
-    bottom: 5mm;
-    right: 5mm;
-    width: 12%;
+    filter: unset;
+    bottom: 2.5%;
+    right: 4.5%;
+    width: 8%;
     margin: 0;
     align-self: flex-end;
+    font-size: .7em;
 `
