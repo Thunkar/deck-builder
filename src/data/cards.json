@@ -43,6 +43,10 @@
             "footer": {}
         },
         {
+            "alt": "Reactor (Size I)",
+            "image": "reactor_3.png"
+        },
+        {
             "title": "Reactor (Size II)",
             "image": "reactor_2.png",
             "sections": [
@@ -78,6 +82,51 @@
                 }
             ],
             "footer": {}
+        },
+        {
+            "alt": "Reactor (Size II)",
+            "image": "reactor_4.png"
+        },
+        {
+            "title": "Reactor (Size III)",
+            "image": "reactor_5.png",
+            "sections": [
+                {
+                    "costs": [
+                        { 
+                            "type": "energy",
+                            "value": "20"
+                        }
+                    ],
+                    "text": "Maximum capacity"
+                },
+                {
+                    "costs": [
+                        { 
+                            "type": "energy",
+                            "value": "6"
+                        }
+                    ],
+                    "text": "Maximum flow"
+                },
+                {
+                    "costs": [
+                        { 
+                            "type": "B",
+                            "value": "15"
+                        }
+                    ],
+                    "text": "Maximum ship size"
+                },
+                {
+                    "text": "Powers your cannons or a small planet"
+                }
+            ],
+            "footer": {}
+        },
+        {
+            "alt": "Reactor (Size III)",
+            "image": "reactor_6.png"
         },
         {
             "title": "Sublight thrusters",
@@ -122,8 +171,54 @@
             }
         },
         {
+            "alt": "Sublight thrusters",
+            "image": "thrusters_2.png"
+        },
+        {
+            "title": "Retro thrusters",
+            "image": "retro_thrusters.png",
+            "sections": [
+                {
+                    "costs": [
+                        {
+                            "type": "energy",
+                            "value": 2,
+                            "blocks": 5
+                        }
+                    ],
+                    "text": "Burn",
+                    "effects": {
+                        "or": [{"name": "turn", "value": 1}, {"name": "accelerate", "value": 1}]
+                    }
+                },
+                {
+                    "costs": [
+                        {
+                            "type": "energy",
+                            "value": 2,
+                            "blocks": 5
+                        },
+                        {
+                            "type": "heat",
+                            "value": 2
+                        }
+                    ],
+                    "text": "Afterburners",
+                    "effects": {
+                        "and": [{"name": "accelerate", "value": 2}]
+                    }
+                },
+                {
+                    "text": "Best defense against Newton's first law"
+                }
+            ],
+            "footer": {
+                "repair": 2
+            }
+        },
+        {
             "title": "Maneuvering thrusters",
-            "image": "maneuvering_thrusters.png",
+            "image": "maneuvering_thrusters_1.png",
             "sections": [
                 {
                     "costs": [
@@ -145,6 +240,10 @@
             "footer": {
                 "repair": 2
             }
+        },
+        {
+            "alt": "Maneuvering thrusters",
+            "image": "maneuvering_thrusters_2.png"
         },
         {
             "title": "Railgun",
@@ -184,7 +283,7 @@
         },
         {
             "title": "Missile rack",
-            "image": "missile_rack.png",
+            "image": "missile_rack_1.png",
             "sections": [
                 {
                     "costs": [
@@ -219,8 +318,12 @@
             }
         },
         {
+            "alt": "Missile rack",
+            "image": "missile_rack_2.png"
+        },
+        {
             "title": "Laser turret",
-            "image": "laser_turret.png",
+            "image": "laser_turret_1.png",
             "sections": [
                 {
                     "costs": [
@@ -255,8 +358,12 @@
             }
         },
         {
+            "alt": "Laser turret",
+            "image": "laser_turret_2.png"
+        },
+        {
             "title": "Ballistic rack",
-            "image": "ballistic_rack.png",
+            "image": "ballistic_rack_1.png",
             "sections": [
                 {
                     "costs": [
@@ -295,7 +402,7 @@
                     ],
                     "text": "PDC",
                     "effects": {
-                        "or": [{"name": "evasion", "value": "+1"}]
+                        "or": [{"name": "evasion", "value": "+1", "details": "vs. missiles"}]
                     }
                 }
             ],
@@ -304,8 +411,12 @@
             }
         },
         {
+            "alt": "Ballistic rack",
+            "image": "ballistic_rack_2.png"
+        },
+        {
             "title": "Plasma cannons",
-            "image": "plasma_cannons.png",
+            "image": "plasma_cannons_1.png",
             "sections": [
                 {
                     "costs": [
@@ -338,6 +449,10 @@
             "footer": {
                 "repair": 4
             }
+        },
+        {
+            "alt": "Plasma cannons",
+            "image": "plasma_cannons_2.png"
         },
         {
             "title": "Deflectors",
@@ -401,6 +516,10 @@
             }
         },
         {
+            "alt": "Deflectors",
+            "image": "deflectors_2.png"
+        },
+        {
             "title": "Sensor array",
             "image": "sensors_1.png",
             "sections": [
@@ -446,6 +565,10 @@
             }
         },
         {
+            "alt": "Sensor array",
+            "image": "sensors_2.png"
+        },
+        {
             "title": "Jump drive",
             "image": "jump_drive.png",
             "sections": [
@@ -472,6 +595,46 @@
             "footer": {
                 "repair": 3
             }
+        },
+        {
+            "title": "Disruptors",
+            "image": "disruptors_1.png",
+            "sections": [
+                {
+                    "costs": [
+                        {
+                            "type": "energy",
+                            "value": 5
+                        },
+                        {
+                            "type": "dice",
+                            "value": 3
+                        },
+                        {
+                            "type": "angle",
+                            "value": 1
+                        },
+                        {
+                            "type": "range",
+                            "value": 3
+                        }
+                    ],
+                    "text": "EMP",
+                    "effects": {
+                        "or": [{"name": "heat", "value": "2"}]
+                    }
+                },
+                {
+                    "text": "You just made an engineer very sad"
+                }
+            ],
+            "footer": {
+                "repair": 4
+            }
+        },
+        {
+            "alt": "Disruptors",
+            "image": "disruptors_2.png"
         }
     ]
 }

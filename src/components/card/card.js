@@ -23,6 +23,7 @@ function Section({text, costs, effects}) {
                         <p>{effect.value}</p>
                         <SC.Icon src={`/assets/${effect.name}.png`}></SC.Icon>
                         {index !== (effects.or.length - 1) && <p>|&nbsp;</p>}
+                        {effect.details && <SC.DetailsText><p>&nbsp;({effect.details})</p></SC.DetailsText>}
                     </SC.IconsContainer>
                     ))
                 }
@@ -32,6 +33,7 @@ function Section({text, costs, effects}) {
                             <p>{effect.value}</p>
                             <SC.Icon src={`/assets/${effect.name}.png`}></SC.Icon>
                             {index !== (effects.and.length - 1) && <p>&&nbsp;</p>}
+                            {effect.details && <SC.DetailsText><p>{effect.details}</p></SC.DetailsText>}
                         </SC.IconsContainer>
                         ))
                 }

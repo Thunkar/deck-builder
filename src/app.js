@@ -15,14 +15,23 @@ function App() {
   const breakAfterRows = 2;
   const columnSize = 5;
 
+  const cards = cardData?.cards.map(card => {
+    let mainCard = {};
+    if(card.alt) {
+      mainCard = cardData.cards.find(mainCard => !mainCard.alt && mainCard.title === card.alt);
+      if(!mainCard) return null;
+    }
+    return {...cardData.common, ...mainCard, ...card}
+  }).filter(card => card);
+
   return (
- <SC.NonPrintableWrapper>
+    <SC.NonPrintableWrapper>
       <SC.Container breakAfterRows={breakAfterRows} ref={componentRef}>
         {
-          chunk(cardData?.cards, columnSize).map((cardChunk, rowIndex) => 
+          chunk(cards, columnSize).map((cardChunk, rowIndex) => 
              (<SC.CardRow key={rowIndex}>
               {
-                cardChunk.map((card, index) => (<Card key={rowIndex + index} {...{...cardData.common, ...card}}/>))
+                cardChunk.map((card, index) => (<Card key={rowIndex + index} {...card}/>))
               }
             </SC.CardRow>))
         }

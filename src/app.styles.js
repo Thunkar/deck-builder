@@ -16,7 +16,7 @@ export const Container = styled.div`
     display: block;
     margin: auto;
 
-    & ${CardRow}:nth-child(${props => props.breakAfterRows}) {
+    & ${CardRow}:nth-child(${props => props.breakAfterRows}n) {
         page-break-after: always;
     }
 `
