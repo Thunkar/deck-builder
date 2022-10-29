@@ -7,7 +7,7 @@ function Section({text, costs, effects}) {
                     {costs?.map((cost, index) => (
                     <SC.IconsContainer key={index}>
                         <p>{cost?.value}</p>
-                        <SC.Icon src={`/assets/${cost.type}.png`}></SC.Icon>
+                        { cost.type !== 'B' ? <SC.Icon src={`/assets/${cost.type}.png`}></SC.Icon> : 'B' }
                         { cost?.blocks && <p>/&nbsp;{cost.blocks}B</p>}
                     </SC.IconsContainer> 
                     ))}
