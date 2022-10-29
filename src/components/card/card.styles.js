@@ -8,7 +8,7 @@ const colors = {
 
 export const Boxed = styled.div`
     color: white;
-    border-radius: 5mm;
+    border-radius: 4mm;
     border-color: ${colors.darker};
 `
 
@@ -61,7 +61,7 @@ export const SectionContainer = styled(Boxed)`
     display: flex;
     flex-direction: row;
     margin: 2% 1.5% 0 1.5%;
-    padding: 1.5% 3%;
+    padding: 1.5% 4%;
     background-color: ${colors.primary};
     filter: drop-shadow(1mm .5mm 1mm black);
 `
@@ -72,7 +72,7 @@ export const IconsContainer = styled.div`
     font-weight: bold;
     font-size: .75em;
     align-items: center;
-    line-height: 1.5em;
+    line-height: 1.3em;
 `
 
 export const CostContainer = styled.div`
