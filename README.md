@@ -26,9 +26,9 @@ You'll need:
 
 ### 1) Apply previous movement vectors
 
-Use the dials you may have accumulated in previous turns to determine your current position and orientation.
+Use the dials you may have accumulated in previous turns to determine your current position and orientation. They can be applied in any order.
 
-***Exception***: If any part of your ship or its base comes into contact with another ship, try to apply the dials in a different order. If there's no way to avoid the collision, apply as many dials as possible and remove all the ones *after* the impact from your dial pool (basically, you use another ship to brake). Now the owners of the ships must throw a 1D10 each. The ship that gets the lower number receives hull damage for the value of the speed that the first removed dial was indicating.
+***Exception***: If any part of your ship or its base comes into contact with another ship, remove all the ones *after* the impact from your dial pool (basically, you use another ship to brake). Now the owners of the ships must throw a 1D10 each. The ship that gets the lower number receives hull damage for the value of the speed that the first removed dial was indicating.
 
 ### 2) Reclaim energy/heat cubes from your systems
 
