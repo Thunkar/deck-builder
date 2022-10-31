@@ -562,7 +562,7 @@
                     "costs": [
                         {
                             "type": "heat",
-                            "value": "+1"
+                            "value": "1"
                         }
                     ],
                     "text": "Move/change field width"
@@ -681,7 +681,7 @@
                     ],
                     "text": "EMP",
                     "effects": {
-                        "or": [{"name": "heat", "value": "2"}]
+                        "or": [{"name": "disable", "value": "1"}]
                     }
                 },
                 {
