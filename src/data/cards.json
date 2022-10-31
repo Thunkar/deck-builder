@@ -130,6 +130,10 @@
         },
         {
             "title": "Sublight thrusters",
+            "subtitle": {
+                "text": "1",
+                "icon": "repair"
+            },
             "image": "thrusters_1.png",
             "sections": [
                 {
@@ -165,10 +169,7 @@
                 {
                     "text": "Burn, baby, burn"
                 }
-            ],
-            "footer": {
-                "repair": 2
-            }
+            ]
         },
         {
             "alt": "Sublight thrusters",
@@ -176,6 +177,10 @@
         },
         {
             "title": "Retro thrusters",
+            "subtitle": {
+                "text": "1",
+                "icon": "repair"
+            },
             "image": "retro_thrusters.png",
             "sections": [
                 {
@@ -211,13 +216,14 @@
                 {
                     "text": "Best defense against Newton's first law"
                 }
-            ],
-            "footer": {
-                "repair": 2
-            }
+            ]
         },
         {
             "title": "Maneuvering thrusters",
+            "subtitle": {
+                "text": "1",
+                "icon": "repair"
+            },
             "image": "maneuvering_thrusters_1.png",
             "sections": [
                 {
@@ -236,10 +242,7 @@
                 {
                     "text": "The 'point' in 'point and shoot'"
                 }
-            ],
-            "footer": {
-                "repair": 2
-            }
+            ]
         },
         {
             "alt": "Maneuvering thrusters",
@@ -247,8 +250,36 @@
         },
         {
             "title": "Railgun",
+            "subtitle": {
+                "text": "4",
+                "icon": "repair"
+            },
             "image": "railgun.png",
             "sections": [
+                {
+                    "costs": [
+                        {
+                            "type": "energy",
+                            "value": 7
+                        },
+                        {
+                            "type": "dice",
+                            "value": 6
+                        },
+                        {
+                            "type": "angle",
+                            "value": 1
+                        },
+                        {
+                            "type": "range",
+                            "value": 6
+                        }
+                    ],
+                    "text": "Magnets, bitch",
+                    "effects": {
+                        "or": [{"name": "damage", "value": "10"}]
+                    }
+                },
                 {
                     "costs": [
                         {
@@ -265,7 +296,7 @@
                         },
                         {
                             "type": "range",
-                            "value": 6
+                            "value": 8
                         }
                     ],
                     "text": "Boom, headshot",
@@ -276,13 +307,14 @@
                 {
                     "text": "Sir Isaac Newton would be proud"
                 }
-            ],
-            "footer": {
-                "repair": 5
-            }
+            ]
         },
         {
             "title": "Missile rack",
+            "subtitle": {
+                "text": "2",
+                "icon": "repair"
+            },
             "image": "missile_rack_1.png",
             "sections": [
                 {
@@ -301,7 +333,7 @@
                         },
                         {
                             "type": "range",
-                            "value": 2
+                            "value": 3
                         }
                     ],
                     "text": "Barrage",
@@ -312,10 +344,7 @@
                 {
                     "text": "Those are not birds"
                 }
-            ],
-            "footer": {
-                "repair": 3
-            }
+            ]
         },
         {
             "alt": "Missile rack",
@@ -323,6 +352,10 @@
         },
         {
             "title": "Laser turret",
+            "subtitle": {
+                "text": "2",
+                "icon": "repair"
+            },
             "image": "laser_turret_1.png",
             "sections": [
                 {
@@ -341,7 +374,7 @@
                         },
                         {
                             "type": "range",
-                            "value": 4
+                            "value": 5
                         }
                     ],
                     "text": "Light show",
@@ -352,10 +385,7 @@
                 {
                     "text": "Cats love them"
                 }
-            ],
-            "footer": {
-                "repair": 3
-            }
+            ]
         },
         {
             "alt": "Laser turret",
@@ -363,6 +393,10 @@
         },
         {
             "title": "Ballistic rack",
+            "subtitle": {
+                "text": "2",
+                "icon": "repair"
+            },
             "image": "ballistic_rack_1.png",
             "sections": [
                 {
@@ -381,7 +415,7 @@
                         },
                         {
                             "type": "range",
-                            "value": 2
+                            "value": 3
                         }
                     ],
                     "text": "Salvo",
@@ -404,11 +438,17 @@
                     "effects": {
                         "or": [{"name": "evasion", "value": "+1", "details": "vs. missiles"}]
                     }
+                },
+                {
+                    "costs": [
+                        {
+                            "type": "heat",
+                            "value": "1"
+                        }
+                    ],
+                    "text": "Change role (offense to PDC or vice-versa)"
                 }
-            ],
-            "footer": {
-                "repair": 3
-            }
+            ]
         },
         {
             "alt": "Ballistic rack",
@@ -416,6 +456,10 @@
         },
         {
             "title": "Plasma cannons",
+            "subtitle": {
+                "text": "3",
+                "icon": "repair"
+            },
             "image": "plasma_cannons_1.png",
             "sections": [
                 {
@@ -447,7 +491,7 @@
                 }
             ],
             "footer": {
-                "repair": 4
+                "repair": 3
             }
         },
         {
@@ -456,6 +500,10 @@
         },
         {
             "title": "Deflectors",
+            "subtitle": {
+                "text": "2",
+                "icon": "repair"
+            },
             "image": "deflectors_1.png",
             "sections": [
                 {
@@ -509,11 +557,17 @@
                     "effects": {
                         "or": [{"name": "evasion", "value": "+4"}]
                     }
+                },
+                {
+                    "costs": [
+                        {
+                            "type": "heat",
+                            "value": "+1"
+                        }
+                    ],
+                    "text": "Move/change field width"
                 }
-            ],
-            "footer": {
-                "repair": 3
-            }
+            ]
         },
         {
             "alt": "Deflectors",
@@ -521,6 +575,10 @@
         },
         {
             "title": "Sensor array",
+            "subtitle": {
+                "text": "2",
+                "icon": "repair"
+            },
             "image": "sensors_1.png",
             "sections": [
                 {
@@ -559,10 +617,7 @@
                         "or": [{"name": "detection", "value": "+2"}]
                     }
                 }
-            ],
-            "footer": {
-                "repair": 3
-            }
+            ]
         },
         {
             "alt": "Sensor array",
@@ -570,6 +625,10 @@
         },
         {
             "title": "Jump drive",
+            "subtitle": {
+                "text": "3",
+                "icon": "repair"
+            },
             "image": "jump_drive.png",
             "sections": [
                 {
@@ -591,13 +650,14 @@
                 {
                     "text": "Punch it!"
                 }
-            ],
-            "footer": {
-                "repair": 3
-            }
+            ]
         },
         {
             "title": "Disruptors",
+            "subtitle": {
+                "text": "3",
+                "icon": "repair"
+            },
             "image": "disruptors_1.png",
             "sections": [
                 {
@@ -627,10 +687,7 @@
                 {
                     "text": "You just made an engineer very sad"
                 }
-            ],
-            "footer": {
-                "repair": 4
-            }
+            ]
         },
         {
             "alt": "Disruptors",

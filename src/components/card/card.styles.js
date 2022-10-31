@@ -34,14 +34,27 @@ export const CardContainerBg = styled(Boxed)`
 `
 
 export const TitleContainer = styled(Boxed)`
+    display: flex;
     color: ${props => props.titleColor || null};
     background-color: ${colors.primary};
-    font-size: .8em;
     padding: 2% 5%;
-    font-weight: bold;
     border-radius: 5mm;
     filter: drop-shadow(1mm .5mm 1mm black);
     margin: 1% 1.5% 0 1.5%;
+
+    & h1 {
+        flex-grow: 1;
+        margin: 0px;
+        font-size: .8em;
+        font-weight: bold;
+    }
+`
+
+export const SubtitleContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: .6em;
 `
 
 export const ImageContainer = styled(Boxed)`

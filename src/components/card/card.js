@@ -43,9 +43,17 @@ function Section({text, costs, effects}) {
     )
 }
 
-function Card({title, borderImage, bgColor, background, image, sections, footer}) {
+function Card({title, borderImage, bgColor, background, image, sections, subtitle, footer}) {
     const cardContent = <>
-     <SC.TitleContainer>{title}</SC.TitleContainer>
+            <SC.TitleContainer>
+                <h1>{title}</h1>
+                { 
+                subtitle && <SC.SubtitleContainer>
+                    <p>{subtitle.text}</p>
+                    <SC.Icon src={`/assets/${subtitle.icon}.png`}></SC.Icon>
+                </SC.SubtitleContainer>
+                }
+            </SC.TitleContainer>
             <SC.ImageContainer image={image}></SC.ImageContainer>
             { sections.map((section, index) => (<Section key={index} {...section}></Section>)) }
         </>
