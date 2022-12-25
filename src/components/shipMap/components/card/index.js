@@ -1,4 +1,4 @@
-import * as SC from './card.styles.js';
+import * as SC from './index.styles.js';
 
 function Section({text, costs, effects}) {
     return (
@@ -43,7 +43,7 @@ function Section({text, costs, effects}) {
     )
 }
 
-function Card({title, borderImage, bgColor, background, image, sections, subtitle, footer}) {
+function Card({title, image, sections, subtitle, footer}) {
     const cardContent = <>
             <SC.TitleContainer>
                 <h1>{title}</h1>
@@ -54,12 +54,11 @@ function Card({title, borderImage, bgColor, background, image, sections, subtitl
                 </SC.SubtitleContainer>
                 }
             </SC.TitleContainer>
-            <SC.ImageContainer image={image}></SC.ImageContainer>
             { sections.map((section, index) => (<Section key={index} {...section}></Section>)) }
         </>
     return (
-        <SC.CardContainer borderImage={borderImage} bgColor={bgColor} background={background}>
-            <SC.CardContainerBg borderImage={borderImage} bgColor={bgColor} background={background}>{cardContent}</SC.CardContainerBg>
+        <SC.CardContainer bgImage={image}>
+            {cardContent}
             { footer?.repair && <SC.Footer>
                 <p>{footer.repair}</p>
                 <SC.Icon src='/assets/repair.png'></SC.Icon>
