@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const colors = {
-    primary: '#2f3c5a',
+    primary: '#141d32',
     accent: 'grey',
     darker: '#00304a'
 }
@@ -24,7 +24,7 @@ export const CardContainer = styled(Boxed)`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 0.1em;
+  padding: 0.2em 0.1em;
   box-sizing: border-box;
   margin: 0.05em;
   border-radius: 2%;
@@ -34,8 +34,9 @@ export const TitleContainer = styled(Boxed)`
     display: flex;
     color: ${props => props.titleColor || null};
     background-color: ${colors.primary};
-    padding: 2% 5%;
+    padding: 1% 3%;
     border-radius: 5mm;
+    align-items: center;
     filter: drop-shadow(1mm .5mm 1mm ${(props) => colors.accent});
     margin: 1% 1.5% 0 1.5%;
 
@@ -44,6 +45,7 @@ export const TitleContainer = styled(Boxed)`
         margin: 0px;
         font-size: .5em;
         font-weight: bold;
+        line-height: 0.5em;
     }
 `
 

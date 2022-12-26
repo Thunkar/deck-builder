@@ -42,7 +42,7 @@ function Section({text, costs, effects}) {
     )
 }
 
-function Card({title, image, sections, subtitle, footer}) {
+function Card({title, image, sections, subtitle}) {
     const cardContent = <>
             <SC.TitleContainer>
                 <h1>{title}</h1>
@@ -54,7 +54,7 @@ function Card({title, image, sections, subtitle, footer}) {
                 }
             </SC.TitleContainer>
             <SC.Spacer/>
-            { sections.map((section, index) => (<Section key={index} {...section}></Section>)) }
+            { sections.filter(section => !section.costs?.find(cost => cost.value === "D")).map((section, index) => (<Section key={index} {...section}></Section>)) }
         </>
     return (
         <SC.CardContainer bgImage={image}>

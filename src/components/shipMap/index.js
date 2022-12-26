@@ -13,10 +13,10 @@ function ShipMap() {
     content: () => componentRef.current,
   });
 
-  const breakAfterRows = 6;
+  const breakAfterRows = 7;
   const columnSize = 6;
 
-  const cards = cardData?.cards
+  const cards = cardData?.cards.concat(cardData?.cards)
     .map((card) => {
       let mainCard = {};
       if (card.alt) {
