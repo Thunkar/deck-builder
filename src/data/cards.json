@@ -379,7 +379,7 @@
                     ],
                     "text": "Light show",
                     "effects": {
-                        "or": [{"name": "damage", "value": 4}]
+                        "or": [{"name": "damage", "value": "2x3"}]
                     }
                 },
                 {
@@ -489,10 +489,7 @@
                 {
                     "text": "Like cotton candy, but deadly"
                 }
-            ],
-            "footer": {
-                "repair": 3
-            }
+            ]
         },
         {
             "alt": "Plasma cannons",
@@ -664,7 +661,7 @@
                     "costs": [
                         {
                             "type": "energy",
-                            "value": 5
+                            "value": 4
                         },
                         {
                             "type": "dice",
@@ -676,12 +673,12 @@
                         },
                         {
                             "type": "range",
-                            "value": 3
+                            "value": 4
                         }
                     ],
                     "text": "EMP",
                     "effects": {
-                        "or": [{"name": "disable", "value": "1"}]
+                        "or": [{"name": "disable", "value": "1", "details": "bypass deflectors"}]
                     }
                 },
                 {

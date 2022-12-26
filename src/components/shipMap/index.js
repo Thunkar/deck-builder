@@ -13,17 +13,21 @@ function ShipMap() {
     content: () => componentRef.current,
   });
 
-  const breakAfterRows = 2;
-  const columnSize = 5;
+  const breakAfterRows = 6;
+  const columnSize = 6;
 
-  const cards = cardData?.cards.map(card => {
-    let mainCard = {};
-    if(card.alt) {
-      mainCard = cardData.cards.find(mainCard => !mainCard.alt && mainCard.title === card.alt);
-      if(!mainCard) return null;
-    }
-    return {...cardData.common, ...mainCard, ...card}
-  }).filter(card => card);
+  const cards = cardData?.cards
+    .map((card) => {
+      let mainCard = {};
+      if (card.alt) {
+        mainCard = cardData.cards.find(
+          (mainCard) => !mainCard.alt && mainCard.title === card.alt
+        );
+        if (!mainCard) return null;
+      }
+      return { ...cardData.common, ...mainCard, ...card };
+    })
+    .filter((card) => card && !card.title.includes("Reactor"));
 
   return (
     <NonPrintableWrapper>

@@ -13,7 +13,7 @@ function Section({text, costs, effects}) {
                     ))}
                 </SC.CostContainer>
             }
-            <SC.TextContainer>
+            <SC.TextContainer wideText={!effects}>
                 <p>{text}</p>
             </SC.TextContainer>
             {effects && <SC.EffectsContainer>
@@ -54,15 +54,12 @@ function Card({title, image, sections, subtitle, footer}) {
                 </SC.SubtitleContainer>
                 }
             </SC.TitleContainer>
+            <SC.Spacer/>
             { sections.map((section, index) => (<Section key={index} {...section}></Section>)) }
         </>
     return (
         <SC.CardContainer bgImage={image}>
             {cardContent}
-            { footer?.repair && <SC.Footer>
-                <p>{footer.repair}</p>
-                <SC.Icon src='/assets/repair.png'></SC.Icon>
-            </SC.Footer> }
         </SC.CardContainer>
     )
 }

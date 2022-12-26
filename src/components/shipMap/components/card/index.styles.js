@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const colors = {
     primary: '#2f3c5a',
-    accent: '#86BDDB',
+    accent: 'grey',
     darker: '#00304a'
 }
 
@@ -13,18 +13,22 @@ export const Boxed = styled.div`
 `
 
 export const CardContainer = styled(Boxed)`
-    display: flex;
-    position: relative; 
-    flex-direction: column;
-    border-radius: 0;
-    height: 30mm;
-    width: 30mm;
-    justify-content: space-between;
-    object-fit: cover;
-    background-image: ${props => `url(/assets/${props.bgImage})`};
-    padding: .2em;
-    box-sizing: border-box;
-`
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  border-radius: 0;
+  height: 30mm;
+  width: 30mm;
+  object-fit: cover;
+  background-image: ${(props) => `url(/assets/${props.bgImage})`};
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 0.1em;
+  box-sizing: border-box;
+  margin: 0.05em;
+  border-radius: 2%;
+`;
 
 export const TitleContainer = styled(Boxed)`
     display: flex;
@@ -32,7 +36,7 @@ export const TitleContainer = styled(Boxed)`
     background-color: ${colors.primary};
     padding: 2% 5%;
     border-radius: 5mm;
-    filter: drop-shadow(1mm .5mm 1mm black);
+    filter: drop-shadow(1mm .5mm 1mm ${(props) => colors.accent});
     margin: 1% 1.5% 0 1.5%;
 
     & h1 {
@@ -49,18 +53,8 @@ export const SubtitleContainer = styled.div`
     align-items: center;
     font-size: .4em;
 `
-
-export const ImageContainer = styled(Boxed)`
-    object-fit: cover;
-    border-radius: 5mm;
-    background-image: ${props => `url(/assets/${props.image})`};
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 50%;
-    border-radius: 5mm;
-    margin: 2% 1.5% 0 1.5%;
-    filter: drop-shadow(1mm .5mm 1mm black);
+export const Spacer = styled.div`
+    flex: auto 1 1;
 `
 
 export const SectionContainer = styled(Boxed)`
@@ -69,25 +63,24 @@ export const SectionContainer = styled(Boxed)`
     justify-content: space-between;
     margin: 2% 1.5% 0 1.5%;
     padding: 1.5% 4%;
-    background-color: ${colors.primary};
-    filter: drop-shadow(1mm .5mm 1mm black);
+    background-color: ${colors.darker};
+    filter: drop-shadow(1mm .5mm 1mm ${(props) => colors.accent});
 `
 
 export const IconsContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    font-weight: bold;
-    font-size: .5em;
-    align-items: center;
-    line-height: 0.5em;
-`
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  font-size: 0.5em;
+  align-items: center;
+  line-height: 0.5em;
+`;
 
 export const CostContainer = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    flex-grow: 1;
-    width: 40%;
+    width: 36%;
 `
 
 export const EffectsContainer = styled(CostContainer)`
@@ -96,11 +89,13 @@ export const EffectsContainer = styled(CostContainer)`
 `
 
 export const TextContainer = styled.div`
-    display: flex;
-    align-items: center;
-    font-style: italic;
-    font-size: .4em;
-`
+  display: flex;
+  align-items: center;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 0.4em;
+  width: ${(props) => props.wideText ? '100%' : '20%'}
+`;
 
 export const Icon = styled.img`
     height: 1.1em;
@@ -111,6 +106,7 @@ export const Icon = styled.img`
 export const DetailsText = styled.div`
     font-style: italic;
     font-size: 0.6em;
+    line-height: 1.3em;
 `
 
 export const Footer = styled(SectionContainer)`
