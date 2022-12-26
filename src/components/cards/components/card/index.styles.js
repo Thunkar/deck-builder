@@ -115,9 +115,10 @@ export const Icon = styled.img`
 `
 
 export const DetailsText = styled.div`
-    font-style: italic;
-    font-size: 0.6em;
-`
+  font-style: italic;
+  font-size: 0.6em;
+  line-height: 1.3em;
+`;
 
 export const Footer = styled(SectionContainer)`
     position: absolute;

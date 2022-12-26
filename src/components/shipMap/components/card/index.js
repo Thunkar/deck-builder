@@ -4,11 +4,10 @@ function Section({text, costs, effects}) {
     return (
         <SC.SectionContainer>
             { costs && <SC.CostContainer>
-                    {costs?.map((cost, index) => (
+                    {costs?.filter(cost => cost.type !== 'B').map((cost, index) => (
                     <SC.IconsContainer key={index}>
                         <p>{cost?.value}</p>
-                        { cost.type !== 'B' ? <SC.Icon src={`/assets/${cost.type}.png`}></SC.Icon> : 'B' }
-                        { cost?.blocks && <p>/&nbsp;{cost.blocks}B</p>}
+                        {  <SC.Icon src={`/assets/${cost.type}.png`}></SC.Icon> }
                     </SC.IconsContainer> 
                     ))}
                 </SC.CostContainer>
